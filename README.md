@@ -3,6 +3,14 @@
 This tool extracts binary asset data (including the soundtrack in OGG format) packaged with the game [Hotline Miami 2:
 Wrong Humber](https://en.wikipedia.org/wiki/Hotline_Miami_2:_Wrong_Number).
 
+## 1ma fork
+
+This fork of the project fixes the script as per the instructions of this issue in the original repository: https://github.com/FooSoft/hlm2-wad-extract/issues/1
+
+At some point the WAD format in the game was updated (documented [here](https://github.com/TcT2k/HLMWadExplorer/issues/4)).
+
+The fix in this fork only does the bare minimum to parse the current version of `hlm2_music_desktop.wad` (as of 2023-05-05) correctly again.
+
 ## Usage
 
 Execute `extract.py` script with the `-h` option for a description of available options ([Python

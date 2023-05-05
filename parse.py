@@ -49,7 +49,7 @@ def extract(wad_file, extract_dir='.', extract_pattern='*.*'):
     with open(wad_file, 'r') as fp:
         wad_data = fp.read()
 
-    wad_offset = 0
+    wad_offset = 16
     asset_count = struct.unpack_from('I', wad_data, wad_offset)[0]
     wad_offset += 4
 
@@ -70,7 +70,7 @@ def extract(wad_file, extract_dir='.', extract_pattern='*.*'):
 
     for index, asset in enumerate(asset_list):
         print('\t({} / {}) Extracting asset file "{}"...'.format(index+1, len(asset_list), asset.filename))
-        asset.extract(wad_data, wad_offset, extract_dir)
+        asset.extract(wad_data, 2974, extract_dir)
 
     print('Operation complete!')
 
